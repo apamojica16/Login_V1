@@ -2,29 +2,28 @@
 <?php
 // display form if user has not clicked submit
 if (isset($_POST["nombre"])) {
-/*include 'conexionsqlserver.php';
+/*include 'conexionsqlserver.php';*/
 
 $name=$_POST['nombre'];
 $cedula=$_POST['cedula'];
 $email=$_POST['email'];
 $contraseña=$_POST['contraseña'];
 $constraseñaconfirm=$_POST['pass'];
-$serverName='DESKTOP-78R5FNV\SQLEXPRESS';
+/*$serverName='DESKTOP-78R5FNV\SQLEXPRESS';
 $connectionInfo=array("Database"=>"Payprueba", "UID"=>"prueba", "PWD"=>"prueba16",);
 $connectionInfo=array("Database"=>"Payprueba");
 $conn_sis=sqlsrv_connect($serverName,$connectionInfo);*/
 
 http://127.0.0.1:50958
-$host="127.0.0.1";
-$port="5432";
-$user="postgres";
-$pass="D1sart3cth";
-$dbname="DemoCM";
+$host='localhost';
+$port=5432;
+$user='postgres';
+$pass='D1sart3cth';
+$dbname='DemoCM';
 
 
 
-$connect = pg_connect("host=$host, port=$port, user=$user, 
-password=$pass, dbname=$dbname");
+$connect = pg_connect("host='$host' port='$port' user='$user' password='$pass' dbname='$dbname'");
 if( $connect ) {
     echo "Conexión establecida.<br />";
 }else{
@@ -35,6 +34,14 @@ if( $connect ) {
 $query = sqlsrv_query($conn_sis,$sentencia);*/
 }
 
+    
+$query ="INSERT INTO login_users (nombres, cedula,email, contraseña) VALUES ('$name', '$cedula','$email', '$contraseña')"; 
+
+$result=pg_query($connect, $query);
+
+if($result){
+    header('Location: login.html');
+}else{}
 echo "nombre= ".$name." cedula= ".$cedula." Correo= ".$email." contraseña= ".$contraseña." confirmacion contraseña= ".$constraseñaconfirm
 
 

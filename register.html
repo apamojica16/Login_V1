@@ -4,6 +4,7 @@
 	<title>Registro</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
@@ -19,6 +20,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	
 <!--================================Bootstrap======================================================-->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -33,7 +35,7 @@
 					<img src="images/logo_sinfondo.png" alt="IMG">
 				</div>
 
-				<form  class="login100-form validate-form" method="POST" action="register.php">
+				<form  id="id_form" style="position: relative;" class="login100-form validate-form" method="POST" action="register.php" >
 					<span class="login100-form-title">
 						Registrate
 					</span>
@@ -63,7 +65,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="contraseña" placeholder="Contraseña">
+						<input class="input100" type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -71,7 +73,7 @@
                     </div>
                     
                     <div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Confirma la Contraseña">
+						<input class="input100" type="password" name="pass" id="pass" placeholder="Confirma la Contraseña">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -79,20 +81,19 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button action="register.php" method="POST" type="submit" name="submit" href="#enviado" class="login100-form-btn"  >
+						<button action="register.php"  method="POST" type="submit" name="submit" href="#enviado" class="login100-form-btn"  >
 							Sign up
 						</button>
 					</div>
 
 					
 				</form>
+			
 			</div>
 		</div>
 	</div>
-	
-	
 
-	
+
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -109,6 +110,7 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script src="js/fuctions.js"></script>
 
 </body>
 </html>

@@ -55,3 +55,12 @@
     
 
 })(jQuery);
+
+$('#contraseña').keyup(function(){
+   
+});
+
+$('#pass').keyup(function(){
+    
+});
+
