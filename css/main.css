@@ -150,11 +150,12 @@ iframe {
 
 .maxsize{
   
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;          /* Safari 3.0 */
+  -moz-background-size: contain;            /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: contain;           /* Opera 9.5 */
+       background-size: contain; 
   width: 100% ;
+  min-width: 270px;
   text-align: center;
 
 }
@@ -486,16 +487,3 @@ iframe {
   }
 }
 
-@media (max-width: 375px) {
-  
-.maxsize{
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 285px ;
-  text-align: center;
-
-}
-}
