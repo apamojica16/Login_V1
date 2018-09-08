@@ -148,6 +148,18 @@ iframe {
 }
 
 
+.maxsize{
+  
+  -webkit-background-size: contain;          /* Safari 3.0 */
+  -moz-background-size: contain;            /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: contain;           /* Opera 9.5 */
+       background-size: contain; 
+  width: 100% ;
+  min-width: 270px;
+  text-align: center;
+
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
@@ -228,7 +240,8 @@ iframe {
 
   width: 100%;
   display: block;
-  padding-bottom: 35px;
+  padding-bottom: 15px;
+  padding-top: 25px;
 }
 
 
@@ -330,7 +343,8 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .login100-form-btn {
@@ -351,7 +365,8 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
+  padding-bottom: 25px;
+  padding-top: 15px;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -372,7 +387,7 @@ iframe {
 
 @media (max-width: 992px) {
   .wrap-login100 {
-    padding: 40px 90px 33px 85px;
+    padding: 20px 40px 20px 40px;
   }
 
   .login100-pic {
@@ -386,7 +401,7 @@ iframe {
 
 @media (max-width: 768px) {
   .wrap-login100 {
-    padding: 100px 80px 33px 80px;
+    padding: 20px 40px 20px 40px;
   }
 
   .login100-pic {
@@ -400,7 +415,7 @@ iframe {
 
 @media (max-width: 576px) {
   .wrap-login100 {
-    padding: 100px 15px 33px 15px;
+    padding: 20px 15px 20px 15px;
   }
 }
 
@@ -471,3 +486,4 @@ iframe {
     opacity: 1;
   }
 }
+
